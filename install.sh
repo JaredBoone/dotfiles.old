@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# https://github.com/kaicataldo/dotfiles/blob/master/bin/install.sh
-
 # This symlinks dotfiles and bin to ~/
 
 answer_is_yes() {
@@ -140,12 +138,17 @@ install_zsh () {
   # Test to see if zshell is installed.  If it is:
   if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Install Oh My Zsh if it isn't already present
-    if [[ ! -d $dir/oh-my-zsh/ ]]; then
+    if [[ ! -d $HOME/.oh-my-zsh/ ]]; then
+      echo "Install oh-my-zsh. You'll need to re-run this script."
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+      exit
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+      echo "Set the default shell to zsh. You'll need to re-run this script."
+      sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
       chsh -s $(which zsh)
+      exit
     fi
   else
     # If zsh isn't installed, get the platform of the current machine
@@ -162,7 +165,7 @@ install_zsh () {
       fi
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
-      echo "Install zsh. You'll need to re-run this script after it's installed."
+      echo "Install zsh. You'll need to re-run this script."
       brew install zsh
       exit
     fi
@@ -187,7 +190,10 @@ install_zsh
 # Install Zsh settings
 ln -s ~/dotfiles/zsh/themes/jared.zsh-theme $HOME/.oh-my-zsh/themes
 
-git clone https://github.com/lukechilds/zsh-nvm $HOME/.oh-my-zsh/custom/plugins/zsh-nvm
+if [[ ! -d $HOME/.oh-my-zsh/custom/plugins/zsh-nvm/ ]]; then
+  git clone https://github.com/lukechilds/zsh-nvm $HOME/.oh-my-zsh/custom/plugins/zsh-nvm
+fi
+
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
@@ -202,7 +208,8 @@ ln -s $HOME/dotfiles/iterm/fonts/Meslo\ LG\ M\ Regular\ for\ Powerline.ttf $HOME
 # Install the Solarized Dark theme for iTerm
 open "${HOME}/dotfiles/iterm/themes/Solarized Dark - Patched.itermcolors"
 
+# Install the Solarized Dark theme for Terminal
 open "${HOME}/dotfiles/terminal/profiles/Solarized Dark ansi.terminal"
 
-# Reload zsh settings
-source ~/.zshrc
+
+echo "Please restart your terminal to apply the changes."
