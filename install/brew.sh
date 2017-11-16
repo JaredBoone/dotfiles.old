@@ -9,7 +9,7 @@ then
 fi
 
 brew update
-brew upgrade --all
+brew upgrade
 apps=(
     ansible
     git
