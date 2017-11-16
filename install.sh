@@ -211,5 +211,6 @@ open "${HOME}/dotfiles/iterm/themes/Solarized Dark - Patched.itermcolors"
 # Install the Solarized Dark theme for Terminal
 open "${HOME}/dotfiles/terminal/profiles/Solarized Dark ansi.terminal"
 
+touch ${HOME}/.zsh.local
 
 echo "Please restart your terminal to apply the changes."
