@@ -176,10 +176,6 @@ install_zsh () {
 
 . "$dir/install/brew.sh"
 
-if [ "$(uname)" == "Darwin" ]; then
-    . "$dir/install/brew-cask.sh"
-fi
-
 main
 install_zsh
 

@@ -11,11 +11,28 @@ fi
 brew update
 brew upgrade
 apps=(
-    ansible
-    git
-    wget
-    zsh
-    zsh-completions
+  ansible
+  git
+  wget
+  zsh
+  zsh-completions
 )
 brew install "${apps[@]}"
 brew cleanup
+
+
+if [ "$(uname)" == "Darwin" ]; then
+  # Install Caskroom
+  brew tap caskroom/cask
+  brew tap caskroom/versions
+  # Install packages
+  apps=(
+      iterm2
+      vagrant
+      virtualbox
+      google-chrome
+      keepassxc
+      google-backup-and-sync
+  )
+  brew cask install "${apps[@]}"
+fi
