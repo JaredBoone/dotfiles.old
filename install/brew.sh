@@ -33,6 +33,10 @@ if [ "$(uname)" == "Darwin" ]; then
       google-chrome
       keepassxc
       google-backup-and-sync
+      firefox
+      slack
+      skype
+      visual-studio-code
   )
   brew cask install "${apps[@]}"
 fi
