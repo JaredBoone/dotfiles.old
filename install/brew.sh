@@ -16,6 +16,7 @@ apps=(
   wget
   zsh
   zsh-completions
+  mas
 )
 brew install "${apps[@]}"
 brew cleanup
@@ -40,3 +41,5 @@ if [ "$(uname)" == "Darwin" ]; then
   )
   brew cask install "${apps[@]}"
 fi
+
+mas install 1091189122 # install Bear writer http://www.bear-writer.com/
