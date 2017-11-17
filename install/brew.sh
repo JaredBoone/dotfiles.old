@@ -31,7 +31,7 @@ if [ "$(uname)" == "Darwin" ]; then
       vagrant
       virtualbox
       google-chrome
-      keepassxc # Note: Add this to Info.plist: <key>LSUIElement</key>\n<true/>
+      keepassxc
       google-backup-and-sync
   )
   brew cask install "${apps[@]}"
