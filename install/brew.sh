@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo -v
+#sudo -v
 
 if test ! $(which brew)
 then
