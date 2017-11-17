@@ -15,7 +15,7 @@ The install script will ...
 ```sh
 $ cd
 $ git clone https://github.com/JaredBoone/dotfiles.git
-$ cd ~/dotfiles
+$ cd ~/dotfiles/install/
 $ . ./install.sh
 ```
 

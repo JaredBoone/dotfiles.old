@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#sudo -v
+echo "[brew.sh] - Begin"
 
 if test ! $(which brew)
 then
@@ -43,3 +43,5 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 mas install 1091189122 # install Bear writer http://www.bear-writer.com/
+
+echo "[brew.sh] - End"
