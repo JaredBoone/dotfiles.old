@@ -32,12 +32,13 @@ if [ "$(uname)" == "Darwin" ]; then
       vagrant
       virtualbox
       google-chrome
-      keepassxc
+      macpass
       google-backup-and-sync
       firefox
       slack
       skype
       visual-studio-code
+      sublime-text
   )
   brew cask install "${apps[@]}"
 fi
