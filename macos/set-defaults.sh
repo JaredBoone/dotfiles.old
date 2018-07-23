@@ -20,6 +20,12 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop/Screens
 # defaults write com.apple.dashboard mcx-disabled -boolean NO; killall Dock
 defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock
 
+# Open text files with sublimetext3 by default
+defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
+
+# Set notification banner display time
+defaults write com.apple.notificationcenterui bannerTime 3
+
 ###############################################################################
 # Finder
 ###############################################################################
