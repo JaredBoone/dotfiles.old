@@ -619,11 +619,17 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>990 -557 620 392 460 -1050 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>509 490 796 473 0 0 1680 1027 </string>
+	<string>544 476 796 473 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 120 1562 907 0 0 1680 1027 </string>
+	<string>270 482 650 527 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>511 433 1138 792 0 0 2560 1417 </string>
+	<string>153 416 650 504 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>0 500 650 527 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>148 526 1081 767 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>508 260 665 527 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -968,6 +974,16 @@
 					<key>regex</key>
 					<string>.com's password:</string>
 				</dict>
+				<dict>
+					<key>action</key>
+					<string>PasswordTrigger</string>
+					<key>parameter</key>
+					<string>NIS</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>[sudo] password for jboone:</string>
+				</dict>
 			</array>
 			<key>Unlimited Scrollback</key>
 			<true/>
@@ -994,7 +1010,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>1220A2A3-577F-409A-9595-17ED39929388</string>
 	<key>NoSyncLastTipTime</key>
-	<real>532480737.65974301</real>
+	<real>543544635.30909503</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1013,6 +1029,71 @@
 		<string>0004</string>
 		<string>0005</string>
 		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0013</string>
+		<string>0014</string>
+		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+		<string>0020</string>
+		<string>0021</string>
+		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
+		<string>0036</string>
+		<string>0037</string>
+		<string>0038</string>
+		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
+		<string>0046</string>
+		<string>0047</string>
+		<string>0048</string>
+		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
+		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
+		<string>0058</string>
+		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
+		<string>0066</string>
+		<string>0067</string>
+		<string>0068</string>
+		<string>0069</string>
+		<string>0070</string>
+		<string>0071</string>
 	</array>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
@@ -1050,7 +1131,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/jboone/workspace/dotfiles/iterm</string>
+	<string>/Users/jboone/dotfiles/iterm</string>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1062,7 +1143,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-15T23:32:09Z</date>
+	<date>2018-07-25T19:51:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
@@ -1070,6 +1151,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.7</string>
 </dict>
 </plist>
