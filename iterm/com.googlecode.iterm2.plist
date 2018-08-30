@@ -616,14 +616,16 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1664 110 830 510 0 0 2560 1417 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>274 596 735 382 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>990 -557 620 392 460 -1050 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>544 476 796 473 0 0 1680 1050 </string>
+	<string>707 160 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>270 482 650 527 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>153 416 650 504 0 0 1680 1027 </string>
+	<string>39 497 650 504 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 500 650 527 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -982,7 +984,7 @@
 					<key>partial</key>
 					<true/>
 					<key>regex</key>
-					<string>[sudo] password for jboone:</string>
+					<string>password for jboone:</string>
 				</dict>
 			</array>
 			<key>Unlimited Scrollback</key>
@@ -1143,7 +1145,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-25T19:51:40Z</date>
+	<date>2018-07-26T19:51:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
