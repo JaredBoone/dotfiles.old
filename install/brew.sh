@@ -26,9 +26,12 @@ if [ "$(uname)" == "Darwin" ]; then
   # Install Caskroom
   brew tap caskroom/cask
   brew tap caskroom/versions
+  brew tap JaredBoone/homebrew-versions
+
   # Install packages
   apps=(
       iterm2
+      java8
       vagrant
       virtualbox
       google-chrome
@@ -36,9 +39,9 @@ if [ "$(uname)" == "Darwin" ]; then
       google-backup-and-sync
       firefox
       slack
-      skype
       visual-studio-code
       sublime-text
+      skype-classic
   )
   brew cask install "${apps[@]}"
 fi
