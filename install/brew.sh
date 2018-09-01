@@ -26,7 +26,7 @@ if [ "$(uname)" == "Darwin" ]; then
   # Install Caskroom
   brew tap caskroom/cask
   brew tap caskroom/versions
-  brew tap JaredBoone/homebrew-versions
+  brew tap JaredBoone/versions
 
   # Install packages
   apps=(
@@ -38,7 +38,6 @@ if [ "$(uname)" == "Darwin" ]; then
       macpass
       google-backup-and-sync
       firefox
-      slack
       visual-studio-code
       sublime-text
       skype-classic
@@ -47,5 +46,6 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 mas install 1091189122 # install Bear writer http://www.bear-writer.com/
+mas install 803453959 # install slack 
 
 echo "[brew.sh] - End"
