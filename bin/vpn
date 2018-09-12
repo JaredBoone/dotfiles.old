@@ -18,7 +18,7 @@ on error
 end try
 
 try
-	set pulseTrayWindowName to do shell script "security find-internet-password -s pulse.secure -a 'aconnection' -w"
+	set pulseTrayWindowName to do shell script "security find-internet-password -s pulse.secure -a 'connection' -w"
 on error
 	display dialog "You must first set your Pulse Secure VPN Connection Name in the keychain. Use this command: security add-internet-password -s pulse.secure -a 'connection' -w \"CONN_NAME\""
 	error number -128
