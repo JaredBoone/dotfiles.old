@@ -1,0 +1,114 @@
+#! /usr/bin/osascript
+
+--
+-- Connect to Junos Pulse VPN using RSA SecurID for 2FA
+--
+
+set pulseSecureAppName to "/Applications/Pulse Secure.app"
+set pulseSecureProcessName to "Pulse Secure"
+set pulseTrayProcessName to "PulseTray"
+set secureIdAppName to "/Applications/SecurID.app"
+set secureIdProcessName to "SecurID"
+
+try
+	set pin to do shell script "security find-internet-password -s rsa.securid -a 'pin' -w"
+on error
+	display dialog "You must first set your SecurID PIN in the keychain. Use this command: security add-internet-password -s rsa.securid -a 'pin' -w YOUR_PIN"
+	error number -128
+end try
+
+try
+	set pulseTrayWindowName to do shell script "security find-internet-password -s pulse.secure -a 'aconnection' -w"
+on error
+	display dialog "You must first set your Pulse Secure VPN Connection Name in the keychain. Use this command: security add-internet-password -s pulse.secure -a 'connection' -w \"CONN_NAME\""
+	error number -128
+end try
+
+-- Start/Restart RSA SecurID, enter the PIN, copy the Passcode to the clipboard
+if application secureIdAppName is running then
+	tell application secureIdAppName to quit
+end if
+
+tell application secureIdAppName to activate
+
+tell application "System Events"
+	tell process secureIdProcessName
+		keystroke pin
+		key code 36
+		delay 0.5
+		keystroke "c" using command down
+	end tell
+end tell
+
+delay 0.5
+
+tell application secureIdAppName to quit
+
+
+-- Start/Restart Junos Pulse, initation connection, proceed past warning, enter secondary token
+if application pulseSecureAppName is running then
+	tell application pulseSecureAppName to quit
+end if
+
+if application pulseTrayProcessName is running then
+	tell application pulseTrayProcessName to quit
+end if
+
+delay 0.5
+
+tell application pulseSecureAppName to activate
+
+delay 0.5
+
+tell application "System Events"
+	if not (exists window pulseTrayWindowName of application process pulseTrayProcessName) then
+		-- the password dialog isn't around, cleanup and open it
+		tell process pulseSecureProcessName
+			tell menu "File" of menu bar item "File" of menu bar 1
+				tell menu "Connections" of menu item "Connections"
+					if (exists menu item "Cancel") then
+						tell me to say "Would have canceled"
+						delay 1
+					end if
+					if (exists menu item "Disconnect") then
+						tell me to display notification "Disconnecting VPN connection"
+						click menu item "Disconnect"
+						--tell me to say "Would have disconnected"
+						delay 1
+					end if
+					repeat until exists menu item "Connect"
+						tell me to display notification "Waiting for connection to close"
+						delay 10
+					end repeat
+					
+					click menu item "Connect"
+					delay 2 -- wait for the window to popup
+				end tell
+			end tell
+		end tell
+	end if
+end tell
+
+tell application "System Events"
+	tell window pulseTrayWindowName of application process pulseTrayProcessName
+		tell sheet 1
+			click button "Proceed"
+		end tell
+	end tell
+end tell
+
+delay 1.0
+
+tell application "System Events"
+	tell window pulseTrayWindowName of application process pulseTrayProcessName
+		tell sheet 1
+			set focused of text field 2 to true
+			tell text field 2
+				keystroke "v" using command down
+			end tell
+			click button "Connect"
+		end tell
+	end tell
+end tell
+
+return
