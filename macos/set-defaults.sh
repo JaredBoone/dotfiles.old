@@ -10,7 +10,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Save screenshots to desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop/Screenshots"
+defaults write com.apple.screencapture location -string "${HOME}/Documents/Screenshots"
 
 # Enable sub-pixel rendering on non-Apple LCDs.
 #defaults write NSGlobalDomain AppleFontSmoothing -int 2
