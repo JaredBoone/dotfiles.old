@@ -41,6 +41,8 @@ if [ "$(uname)" == "Darwin" ]; then
       sublime-text
       inboxer
       slack
+      malwarebytes
+      ccleaner
   )
   brew cask install "${apps[@]}"
 fi
