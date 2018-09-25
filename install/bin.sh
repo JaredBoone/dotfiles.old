@@ -3,6 +3,7 @@
 
 symlink_binaries() {
   echo "Moving ~/bin to ~/bin_old"
+  rm -f ~/bin_old
   mv ~/bin ~/bin_old
 
   # Copy binaries
