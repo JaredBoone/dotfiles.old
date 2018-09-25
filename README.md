@@ -13,8 +13,9 @@ The install script will ...
 ## Install
 
 ```sh
-$ cd
-$ git clone https://github.com/JaredBoone/dotfiles.git
+$ sudo softwareupdate -i -a
+$ xcode-select --install
+$ git clone https://github.com/JaredBoone/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles/install/
 $ . ./install.sh
 ```
