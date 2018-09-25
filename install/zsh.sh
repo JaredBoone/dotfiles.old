@@ -31,9 +31,12 @@ install_zsh () {
     git clone https://github.com/lukechilds/zsh-nvm $HOME/.oh-my-zsh/custom/plugins/zsh-nvm
   fi
 
-  # Install powerline font
+  # Install powerline fonts
   if [[ ! -f "${HOME}/Library/Fonts/Meslo LG M Regular for Powerline.ttf" ]]; then
-    ln -s "${HOME}/dotfiles/iterm/fonts/Meslo LG M Regular for Powerline.ttf" $HOME/Library/Fonts/
+    cp "${HOME}/dotfiles/iterm/fonts/Meslo LG M Regular for Powerline.ttf" $HOME/Library/Fonts/
+  fi
+  if [[ ! -f "${HOME}/Library/Fonts/Source Code Pro for Powerline.otf" ]]; then
+    cp "${HOME}/dotfiles/iterm/fonts/Source Code Pro for Powerline.otf" $HOME/Library/Fonts/
   fi
 
   # Install custom zsh theme
