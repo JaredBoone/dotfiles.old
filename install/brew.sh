@@ -36,16 +36,15 @@ if [ "$(uname)" == "Darwin" ]; then
       virtualbox
       google-chrome
       macpass
-      google-backup-and-sync
       firefox
       visual-studio-code
       sublime-text
-      skype-classic
+      inboxer
+      slack
   )
   brew cask install "${apps[@]}"
 fi
 
 mas install 1091189122 # install Bear writer http://www.bear-writer.com/
-mas install 803453959 # install slack 
 
 echo "[brew.sh] - End"
