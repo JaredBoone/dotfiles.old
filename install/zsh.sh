@@ -43,7 +43,7 @@ install_zsh () {
   fi
 
   # Local zshrc
-  touch ${HOME}/.zsh.local
+  touch ${HOME}/.zshrc.local
 
   echo "[zsh.sh] - End"
 }

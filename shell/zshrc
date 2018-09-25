@@ -71,7 +71,7 @@ export NVM_LAZY_LOAD=true
 source $ZSH/oh-my-zsh.sh
 
 # Source local extra (private) settings specific to machine if it exists
-[ -f ~/.zsh.local ] && source ~/.zsh.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 # User configuration
 

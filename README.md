@@ -17,11 +17,12 @@ $ sudo softwareupdate -i -a
 $ xcode-select --install
 $ git clone https://github.com/JaredBoone/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles/install/
-$ . ./install.sh
+$ chmod +x ./install.sh
+$ ./install.sh
 ```
 
 ## Customize
 
 The dotfiles can be extended locally:
-#### `~/.zsh.local`
+#### `~/.zshrc.local`
 #### `~/.gitconfig.local`
