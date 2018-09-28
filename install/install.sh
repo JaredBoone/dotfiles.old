@@ -8,5 +8,6 @@ echo "[install.sh] - Begin"
 . "./zsh.sh"
 . "./terminal.sh"
 . "./iterm.sh"
+. "./dock.sh"
 
 echo "[install.sh] - End"

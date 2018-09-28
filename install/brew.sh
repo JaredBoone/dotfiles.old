@@ -17,6 +17,7 @@ apps=(
   zsh
   zsh-completions
   mas
+  dockutil
 )
 brew install "${apps[@]}"
 brew cleanup
