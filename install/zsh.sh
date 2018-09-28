@@ -7,7 +7,6 @@ install_zsh () {
   if [ ! -f /usr/local/bin/zsh ]; then
       echo "Installing zsh. Re-run this script."
       brew install zsh
-      exit
   fi
 
   # Set the default shell to zsh\
@@ -21,8 +20,7 @@ install_zsh () {
   # Install Oh My Zsh
   if [[ ! -d $HOME/.oh-my-zsh/ ]]; then
     echo "Installing oh-my-zsh. Re-run this script."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    exit
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh -l::g' | sed 's:chsh -s .*$::g')"
   fi
 
   # zsh-nvm
