@@ -2,11 +2,26 @@
 
 
 symlink_binaries() {
-  echo "Moving ~/bin to ~/bin_old"
-  rm -f ~/bin_old
-  mv ~/bin ~/bin_old
+  
+  # check for existing dir
+  if [[ -e "$HOME/bin" ]]
+  then
+    echo "Found exising ~/bin"
+    if [[ -L "$HOME/bin" ]]
+    then
+      # remove old symlink
+      echo "Removing stale ~/bin symlink"
+      rm -f $HOME/bin
+    else
+      # backup old bin dir
+      now=$(date +"%Y_%m_%d")
+      echo "Renaming existing ~/bin to ~/bin.$now"
+      mv $HOME/bin $HOME/bin.$now
+    fi
+  fi
 
-  # Copy binaries
+  # create ~/bin symlink
+  echo "Creating new ~/bin symlink"
   ln -fs $HOME/dotfiles/bin $HOME
 
   declare -a BINARIES=(
