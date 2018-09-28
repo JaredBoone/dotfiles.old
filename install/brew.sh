@@ -44,7 +44,6 @@ if [ "$(uname)" == "Darwin" ]; then
       slack
       malwarebytes
       ccleaner
-      flux
       appcleaner
       cheatsheet
   )
