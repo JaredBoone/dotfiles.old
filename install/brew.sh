@@ -46,6 +46,7 @@ if [ "$(uname)" == "Darwin" ]; then
       ccleaner
       flux
       appcleaner
+      cheatsheet
   )
   brew cask install "${apps[@]}"
 fi
