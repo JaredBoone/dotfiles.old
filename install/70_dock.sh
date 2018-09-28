@@ -6,7 +6,7 @@ dockutil --list | awk -F"\t" '{print $1}' | while read -r line; do
 done
 
 # Give dock time to restart
-sleep 1
+sleep 5
 
 # Add Applications folder as a list
 dockutil --add '/Applications' --view list --display folder --sort name
