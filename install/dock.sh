@@ -9,4 +9,4 @@ done
 sleep 1
 
 # Add Applications folder as a list
-dockutil --add '/Applications' --view list --display folder
+dockutil --add '/Applications' --view list --display folder --sort name
