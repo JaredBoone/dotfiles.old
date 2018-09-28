@@ -8,48 +8,10 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+pushd ../brew
 brew update
-brew upgrade
-apps=(
-  ansible
-  git
-  wget
-  zsh
-  zsh-completions
-  mas
-  dockutil
-)
-brew install "${apps[@]}"
+brew bundle
 brew cleanup
-
-
-if [ "$(uname)" == "Darwin" ]; then
-  # Install Caskroom
-  brew tap caskroom/cask
-  brew tap caskroom/versions
-  brew tap JaredBoone/versions
-
-  # Install packages
-  apps=(
-      iterm2
-      #java8
-      vagrant
-      virtualbox
-      google-chrome
-      macpass
-      firefox
-      visual-studio-code
-      sublime-text
-      inboxer
-      slack
-      malwarebytes
-      ccleaner
-      appcleaner
-      cheatsheet
-  )
-  brew cask install "${apps[@]}"
-fi
-
-mas install 1091189122 # install Bear writer http://www.bear-writer.com/
+popd
 
 echo "[brew.sh] - End"
