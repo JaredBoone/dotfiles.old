@@ -103,3 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias firefox="open /Applications/Firefox.app"
 alias chrome="open /Applications/Google\ Chrome.app"
+
+# for zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
