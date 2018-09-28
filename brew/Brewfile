@@ -7,7 +7,7 @@ tap "jaredboone/versions"
 brew "ansible"
 brew "dockutil"
 brew "git"
-brew "mas"
+#brew "mas"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
@@ -26,5 +26,5 @@ cask "sublime-text"
 cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
-mas "Bear", id: 1091189122
-mas "Time Out", id: 402592703
+#mas "Bear", id: 1091189122
+#mas "Time Out", id: 402592703
