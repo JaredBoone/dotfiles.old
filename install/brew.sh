@@ -44,6 +44,8 @@ if [ "$(uname)" == "Darwin" ]; then
       slack
       malwarebytes
       ccleaner
+      flux
+      appcleaner
   )
   brew cask install "${apps[@]}"
 fi
