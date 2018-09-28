@@ -31,7 +31,7 @@ if [ "$(uname)" == "Darwin" ]; then
   # Install packages
   apps=(
       iterm2
-      java8
+      #java8
       vagrant
       virtualbox
       google-chrome
