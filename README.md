@@ -17,7 +17,7 @@ $ sudo softwareupdate -i -a
 $ xcode-select --install
 $ git clone https://github.com/JaredBoone/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles/install/
-$ chmod +x ./install.sh
+$ sudo -v
 $ ./install.sh
 ```
 
