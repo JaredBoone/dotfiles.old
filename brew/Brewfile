@@ -7,7 +7,6 @@ tap "jaredboone/versions"
 brew "ansible"
 brew "dockutil"
 brew "git"
-#brew "mas"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
@@ -20,11 +19,17 @@ cask "google-chrome"
 cask "inboxer"
 cask "iterm2"
 cask "macpass"
-cask "malwarebytes"
 cask "slack"
 cask "sublime-text"
-cask "vagrant"
-cask "virtualbox"
 cask "visual-studio-code"
+cask "vagrant"
+#requires sudo
+cask "malwarebytes"
+
+# fails due to Security Prompt
+# cask "virtualbox"
+
+# fails due to App Store changes
+#brew "mas"
 #mas "Bear", id: 1091189122
 #mas "Time Out", id: 402592703
