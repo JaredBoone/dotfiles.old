@@ -59,14 +59,15 @@ symlink_dotfiles() {
     'git/gitignore'
   )
 
-  # Create dotfiles_old in homedir
-  echo "Creating ~/dotfiles_old"
-  mkdir -p $HOME/dotfiles_old
+  # Create dotfiles backup in homedir
+  now=$(date +"%Y_%m_%d")
+  echo "Creating ~/dotfiles.$now"
+  mkdir -p $HOME/dotfiles.$now
   echo "Done"
 
   for i in ${FILES_TO_SYMLINK[@]}; do
-    echo "Moving existing dotfiles from ~ to ~/dotfiles_old/"
-    mv $HOME/.${i##*/} $HOME/dotfiles_old/
+    echo "Moving existing dotfiles from ~ to ~/dotfiles.$now/"
+    mv $HOME/.${i##*/} $HOME/dotfiles.$now/
   done
 
 
