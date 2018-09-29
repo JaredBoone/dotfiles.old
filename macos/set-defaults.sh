@@ -67,6 +67,10 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
+
+# Show New Windows show folder
+defaults write com.apple.finder NewWindowTargetPath "file://$HOME/"
+
 ###############################################################################
 # Dock
 ###############################################################################
@@ -82,6 +86,9 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Automatically hide and show the Dock
 # defaults write com.apple.dock autohide -bool true
+
+# Show active apps only
+#defaults write com.apple.dock static-only -bool TRUE
 
 ###############################################################################
 # Do some clean up work.

@@ -20,6 +20,13 @@ symlink_binaries() {
     fi
   fi
 
+  # create ~/bin.local
+  if ! [[ -e "$HOME/bin.local" ]]
+  then
+    echo "Creating ~/bin.local/"
+    mkdir $HOME/bin.local
+  fi
+
   # create ~/bin symlink
   echo "Creating new ~/bin symlink"
   ln -fs $HOME/dotfiles/bin $HOME
