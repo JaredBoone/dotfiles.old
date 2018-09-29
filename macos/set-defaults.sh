@@ -87,8 +87,8 @@ defaults write com.apple.finder NewWindowTargetPath "file://$HOME/"
 # Automatically hide and show the Dock
 # defaults write com.apple.dock autohide -bool true
 
-# Show active apps only
-#defaults write com.apple.dock static-only -bool TRUE
+# Do not show recents
+defaults write com.apple.dock show-recents 0
 
 ###############################################################################
 # Do some clean up work.
