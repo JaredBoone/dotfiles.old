@@ -90,6 +90,14 @@ defaults write com.apple.finder NewWindowTargetPath "file://$HOME/"
 # Do not show recents
 defaults write com.apple.dock show-recents 0
 
+
+
+################
+# Calendar
+################
+defaults write com.apple.iCal "Default duration in minutes for new event" -int 15
+
+
 ###############################################################################
 # Do some clean up work.
 ###############################################################################
