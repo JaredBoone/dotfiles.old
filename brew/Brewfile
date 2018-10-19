@@ -34,3 +34,4 @@ cask "malwarebytes"
 #brew "mas"
 #mas "Bear", id: 1091189122
 #mas "Time Out", id: 402592703
+#mas "Pocket", id: ?
