@@ -88,7 +88,7 @@ defaults write com.apple.finder NewWindowTargetPath "file://$HOME/"
 # defaults write com.apple.dock autohide -bool true
 
 # Do not show recents
-defaults write com.apple.dock show-recents 0
+defaults write com.apple.dock show-recents -bool false
 
 
 
