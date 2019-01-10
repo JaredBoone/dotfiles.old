@@ -36,5 +36,5 @@ brew "mas"
 mas "Bear", id: 1091189122
 mas "Time Out", id: 402592703
 mas "Pocket", id: 568494494
-mas "Terllo", id: 1278508951
+mas "Trello", id: 1278508951
 
