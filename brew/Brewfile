@@ -25,6 +25,7 @@ cask "sublime-text"
 cask "visual-studio-code"
 cask "vagrant"
 cask "unlox"
+cask "postman"
 #requires sudo
 cask "malwarebytes"
 
