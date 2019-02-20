@@ -5,6 +5,8 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "jaredboone/versions"
 brew "ansible"
+brew "docker"
+brew "docker-machine", start_service: true
 brew "dockutil"
 brew "git"
 brew "wget"
